@@ -8,9 +8,8 @@ editor: visual
 library (dplyr)
 library (readr)
 library (ggplot2)
-library(psych)
 
-survey_data <- read_csv("students_survey.csv")
+survey_data <- read_csv("data\\students_survey.csv")
 
 colnames(survey_data) <- c("id","start_time","end_time","academic_year","gender","age","distance","course_name","course_branch","high_school_category","national_high_school_category","hight_school_average","study_hours","sleep_hours","mid_exam_score","gpa","does_work","fulltime_parttime","private_employed","satisfaction_at_university")
 
@@ -20,9 +19,6 @@ write_csv(survey_data,"students_survey.csv")
 Display columns along with data types
 
 ```{r}
-# Set the maximum number of rows to display
-options(repr.matrix.max.rows = 100)  # Adjust the number as needed
-
 # Get column names and their types
 columns_info <- data.frame(
   Column_Name = names(survey_data),
