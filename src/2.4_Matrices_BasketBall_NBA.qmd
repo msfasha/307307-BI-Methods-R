@@ -287,7 +287,7 @@ Observation: Salaries tend to increase over time for most players, reflecting th
 There are noticeable peaks and troughs corresponding to contract renewals and injuries. For instance, **Kobe Bryant** and **Derrick Rose** show significant salary increases.
 
 | **Kobe Bryant**                      | **Derrick Rose**                     |
-|------------------------------------|------------------------------------|
+|--------------------------------------|--------------------------------------|
 | ![](images/clipboard-2507376526.png) | ![](images/clipboard-4233333222.png) |
 
 ```{r}
@@ -349,7 +349,7 @@ Observation: Total points scored reflect the scoring capability of players.
 Consistent high scores by players like **Carmelo Anthony** and **Dwyane Wade** indicate top performance, while drops may indicate injuries or decreased performance (**Kobe Bryant** and **Derrick Rose**).
 
 | **Carmelo Anthony**                  | **Dwyane Wade**                      |
-|------------------------------------|------------------------------------|
+|--------------------------------------|--------------------------------------|
 | ![](images/clipboard-1660219318.png) | ![](images/clipboard-2886626444.png) |
 
 ```{r}
@@ -371,7 +371,7 @@ Observation: Average field goals per game show how regularly players score.
 Higher averages by players like **LeBron James** and **Kobe Bryant** indicate consistent performance.
 
 | **LeBron James** |  **Kobe Bryant** |
-|---------------------------------------------|---------------------------|
+|----|----|
 | ![](images/clipboard-3737293962.png){width="328" height="352"} | ![](images/clipboard-2711529862.png) |
 
 ```{r}
@@ -391,7 +391,7 @@ Observation: Field goal accuracy highlights shooting efficiency.
 Higher ratios by players like **Chris Paul** indicate better accuracy and scoring efficiency. Also, **Dwight Howard** has a high goals/attempts ratio.
 
 | **Chris Paul**                       | Col2                                 |
-|------------------------------------|------------------------------------|
+|--------------------------------------|--------------------------------------|
 | ![](images/clipboard-3832951574.png) | ![](images/clipboard-3292632723.png) |
 
 ```{r}
@@ -409,7 +409,7 @@ Higher numbers by players like **Kevin Durant** indicate more attempts to score.
 On the other hand, we see players like **Dwight Howard** has a low attempts/game ratio although the goals/attempts was high, but the player does not make many attempts per game and he does not score many points per game (becuase he has fewer attempts than others, may be his playing position does not give him the opportunity to make more attempts, may be he prefers team playing and passes the ball for better team member to make a score), this requires more domain knowledge to explain.
 
 | **Kevin Durant** | **Dwight Howard** |
-|---------------------------------------------|---------------------------|
+|----|----|
 | ![](images/clipboard-2321776338.png){width="339" height="390"} | ![](images/clipboard-3857999558.png) |
 
 ```{r}
@@ -427,7 +427,7 @@ Consistent high averages by players like **LeBron James** and **Dwyane Wade** in
 Also, we can see that **Dwight Howard** who has a low attempts/game ratio does not score many points per game.
 
 | **LeBron James** | **Dwyane Wade** | **Dwight Howard** |
-|--------------------|--------------------|---------------------------------|
+|----|----|----|
 | ![](images/clipboard-335305530.png) | ![](images/clipboard-642059218.png) | ![](images/clipboard-235127774.png){width="213" height="202"} |
 
 ```{r}

@@ -19,7 +19,7 @@ library (ggplot2)
 library (stringr)
 library(tidyr)
 
-survey_data <- read_csv("data\\students_survey.csv", show_col_types = FALSE)
+survey_data <- read_csv("data/students_survey.csv", show_col_types = FALSE)
 ```
 
 ### 1. One-sample T-test

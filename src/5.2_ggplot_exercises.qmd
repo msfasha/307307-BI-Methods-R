@@ -13,7 +13,7 @@ include-before: |
 ```{r}
 library(readr)
 
-data_path = "data\\superstore.csv"
+data_path = "data/superstore.csv"
 superstore <- read_csv(data_path, show_col_types = FALSE)
 ```
 

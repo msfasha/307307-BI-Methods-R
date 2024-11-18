@@ -60,7 +60,7 @@ library(readr)
 ### Open CSV File
 
 ```{r}
-file_path <- "data\\superstore.csv"
+file_path <- "data/superstore.csv"
 superstore <- read_csv(file_path, show_col_types = FALSE)
 ```
 

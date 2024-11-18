@@ -13,7 +13,7 @@ include-before: |
 ```{r}
 library(readr)
 
-data_path = "data\\superstore.csv"
+data_path = "data/superstore.csv"
 superstore <- read_csv(data_path, show_col_types = FALSE)
 ```
 
@@ -275,18 +275,19 @@ superstore %>%
 
 ------------------------------------------------------------------------
 
-### Preparing Data for Market Basket Analysis Here's how you can prepare the Superstore data for market basket analysis:
+### Preparing Data for Market Basket Analysis
+
+Here's how you can prepare the Superstore data for market basket analysis:
 
 Group Items by Transaction (Order ID): You need to group the items by Order ID and then convert them into a list format where each list element contains all the items bought in that transaction.
 
 Convert to Transaction Format: The list of items per transaction can then be converted into a transaction object, which can be used for association rule mining with the arules package.
 
-```{r}
+```{r eval=FALSE}
 library(dplyr)
 library(tidyr)
 library(arules)
 library(arulesViz)
-
 
 # Prepare the data by grouping products by Order ID
 superstore_basket <- superstore %>%

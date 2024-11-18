@@ -1,5 +1,5 @@
 ---
-title: "1.1 Introduction to R"
+title: "1 Introduction to R"
 format: html
 editor: visual
 include-before: |
