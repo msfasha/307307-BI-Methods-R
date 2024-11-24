@@ -393,7 +393,7 @@ library(stringr)
 #### Special Characters in Regex
 
 | Pattern | Meaning | Example |
-|------------------|-----------------------------|-------------------------|
+|----|----|----|
 | `\\d` | Digit (0–9) | `\\d{4}` matches "2023" |
 | `\\w` | Word character (letters, numbers) | `\\w+` matches "apple" |
 | `\\s` | Whitespace | `\\s+` matches spaces |

@@ -1,5 +1,5 @@
 ---
-title: "5.1_Basic Plotting in R"
+title: "5.1_Introduction to ggplot2"
 format: html
 editor: visual
 include-before: |
