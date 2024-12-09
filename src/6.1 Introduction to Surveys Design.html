@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>6.1 Introduction to Survey Design</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="6.1 Introduction to Surveys Design_files/libs/clipboard/clipboard.min.js"></script>
+<script src="6.1 Introduction to Surveys Design_files/libs/quarto-html/quarto.js"></script>
+<script src="6.1 Introduction to Surveys Design_files/libs/quarto-html/popper.min.js"></script>
+<script src="6.1 Introduction to Surveys Design_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="6.1 Introduction to Surveys Design_files/libs/quarto-html/anchor.min.js"></script>
+<link href="6.1 Introduction to Surveys Design_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="6.1 Introduction to Surveys Design_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="6.1 Introduction to Surveys Design_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="6.1 Introduction to Surveys Design_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="6.1 Introduction to Surveys Design_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+<div style="text-align: center;">
+  <img src="images/department_logo.png" width="169">
+  <img src="images/ioa_logo.png" width="122">
+  <img src="images/petra_logo.png" width="52">
+</div>
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">6.1 Introduction to Survey Design</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>A survey is a systematic method of collecting information from individuals to gain insights into opinions, behaviors, or characteristics. Surveys are essential in fields such as market research, social sciences, healthcare, and customer feedback analysis. A well-designed survey is crucial for ensuring the reliability, validity, and usefulness of the collected data.</p>
+<hr>
+<section id="principles-of-good-survey-design" class="level2">
+<h2 class="anchored" data-anchor-id="principles-of-good-survey-design">Principles of Good Survey Design</h2>
+<ol type="1">
+<li><strong>Clear Objectives</strong>
+<ul>
+<li>Define the purpose of your survey and the specific data you aim to collect.</li>
+</ul></li>
+<li><strong>Know Your Audience</strong>
+<ul>
+<li>Understand the demographic and cultural context of your respondents to ensure relevance and clarity.</li>
+</ul></li>
+<li><strong>Question Clarity</strong>
+<ul>
+<li>Use simple, unambiguous language.</li>
+<li>Avoid leading or double-barreled questions that may confuse respondents or bias their answers.</li>
+</ul></li>
+<li><strong>Survey Length</strong>
+<ul>
+<li>Keep it concise to maintain engagement while ensuring comprehensive data collection.</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+<section id="types-of-surveys" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-surveys">Types of Surveys</h2>
+<p>Surveys can be categorized based on their method, purpose, or frequency:</p>
+<section id="a.-by-data-collection-method" class="level3">
+<h3 class="anchored" data-anchor-id="a.-by-data-collection-method">A. By Data Collection Method</h3>
+<ol type="1">
+<li><strong>Online Surveys</strong>
+<ul>
+<li>Distributed via email, social media, or platforms like Google Forms.<br>
+</li>
+<li><strong>Advantages</strong>: Cost-effective, scalable, and fast.</li>
+</ul></li>
+<li><strong>Paper Surveys</strong>
+<ul>
+<li>Suitable for populations with limited internet access.<br>
+</li>
+<li><strong>Use Case</strong>: Rural or underconnected regions.</li>
+</ul></li>
+<li><strong>Telephone Surveys</strong>
+<ul>
+<li>Effective for quick responses but prone to low response rates.</li>
+</ul></li>
+<li><strong>Face-to-Face Interviews</strong>
+<ul>
+<li>Provide in-depth insights but are time-intensive and costly.</li>
+</ul></li>
+</ol>
+</section>
+<section id="b.-by-purpose" class="level3">
+<h3 class="anchored" data-anchor-id="b.-by-purpose">B. By Purpose</h3>
+<ol type="1">
+<li><strong>Descriptive Surveys</strong>
+<ul>
+<li>Describe characteristics or opinions of a population.<br>
+</li>
+<li><strong>Example</strong>: Customer satisfaction surveys.</li>
+</ul></li>
+<li><strong>Analytical Surveys</strong>
+<ul>
+<li>Explore relationships between variables.<br>
+</li>
+<li><strong>Example</strong>: Surveys linking exercise habits to mental health.</li>
+</ul></li>
+<li><strong>Exploratory Surveys</strong>
+<ul>
+<li>Generate ideas or gather initial insights.<br>
+</li>
+<li><strong>Example</strong>: Brainstorming new product features.</li>
+</ul></li>
+</ol>
+</section>
+<section id="c.-by-frequency" class="level3">
+<h3 class="anchored" data-anchor-id="c.-by-frequency">C. By Frequency</h3>
+<ol type="1">
+<li><strong>Cross-sectional Surveys</strong>
+<ul>
+<li>Conducted at a single point in time to capture a snapshot of opinions or behaviors.<br>
+</li>
+<li><strong>Example</strong>: Dietary habits survey among college students during one semester.<br>
+</li>
+<li><strong>Purpose</strong>: Understand behaviors at a specific time.</li>
+</ul></li>
+<li><strong>Longitudinal Surveys</strong>
+<ul>
+<li>Repeatedly conducted over time to track changes or trends.<br>
+</li>
+<li><strong>Example</strong>: Annual health studies tracking exercise habits.<br>
+</li>
+<li><strong>Purpose</strong>: Capture trends and behavioral evolution.</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+</section>
+<section id="types-of-questions" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-questions">Types of Questions</h2>
+<ol type="1">
+<li><strong>Open-ended Questions</strong>
+<ul>
+<li>Allow respondents to answer in their own words, providing detailed insights.</li>
+</ul></li>
+<li><strong>Closed-ended Questions</strong>
+<ul>
+<li>Include multiple-choice, yes/no, or ranking formats.</li>
+</ul></li>
+<li><strong>Rating Scales</strong>
+<ul>
+<li>Commonly use Likert scales (e.g., strongly agree to strongly disagree).</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+<section id="sampling-methods" class="level2">
+<h2 class="anchored" data-anchor-id="sampling-methods">Sampling Methods</h2>
+<section id="probability-sampling" class="level3">
+<h3 class="anchored" data-anchor-id="probability-sampling">Probability Sampling</h3>
+<section id="simple-random-sampling-srs" class="level4">
+<h4 class="anchored" data-anchor-id="simple-random-sampling-srs">1. Simple Random Sampling (SRS)</h4>
+<ul>
+<li><strong>Description</strong>: In SRS, every individual in the population has an equal chance of being selected. This is typically achieved using random number generation or drawing names from a hat.</li>
+<li><strong>Purpose</strong>:
+<ul>
+<li>To obtain an unbiased sample when the population is homogeneous, or when there is a list of all members.</li>
+</ul></li>
+<li><strong>Example</strong>:
+<ul>
+<li>A university wants to select 100 students from its 1,000 students for a survey on campus life. By randomly choosing 100 students from the list, every student has an equal chance of being selected, ensuring no bias in the sample.</li>
+</ul></li>
+</ul>
+</section>
+<section id="systematic-sampling" class="level4">
+<h4 class="anchored" data-anchor-id="systematic-sampling">2. Systematic Sampling</h4>
+<ul>
+<li><strong>Description</strong>: In systematic sampling, every nth individual is selected from a list after choosing a random starting point. The interval between selections (k) is typically determined by dividing the population size by the desired sample size.</li>
+<li><strong>Purpose</strong>:
+<ul>
+<li>To simplify the sampling process when the population list is ordered and when random sampling is not feasible due to time or resources.</li>
+</ul></li>
+<li><strong>Example</strong>:
+<ul>
+<li>A company wants to survey 200 employees about job satisfaction but has a list of 1,000 employees. They choose a random starting point (say, employee 5) and then select every 5th employee on the list to form the sample.</li>
+</ul></li>
+</ul>
+</section>
+<section id="stratified-sampling" class="level4">
+<h4 class="anchored" data-anchor-id="stratified-sampling">3. Stratified Sampling</h4>
+<ul>
+<li><strong>Description</strong>: The population is divided into mutually exclusive subgroups (strata) based on a certain characteristic (e.g., age, gender, income). A random sample is taken from each stratum.</li>
+<li><strong>Purpose</strong>:
+<ul>
+<li>To ensure that specific subgroups of the population are represented proportionally, especially when the population is heterogeneous.</li>
+</ul></li>
+<li><strong>Example</strong>:
+<ul>
+<li>A health survey wants to study the habits of different age groups. The population is divided into strata such as 18-30, 31-45, 46-60, and 60+. A random sample is taken from each age group to ensure all ages are represented.</li>
+</ul></li>
+</ul>
+</section>
+<section id="cluster-sampling" class="level4">
+<h4 class="anchored" data-anchor-id="cluster-sampling">4. Cluster Sampling</h4>
+<ul>
+<li><strong>Description</strong>: The population is divided into clusters (often based on geography or other natural groupings), and a random sample of clusters is selected.</li>
+<li><strong>Purpose</strong>:
+<ul>
+<li>To reduce costs and logistical challenges when the population is large and dispersed over a wide area, making individual selection impractical.</li>
+</ul></li>
+<li><strong>Example</strong>:
+<ul>
+<li>A government wants to conduct a census of rural households in a country. Instead of surveying every household, they randomly select a few villages (clusters) and survey all households within those selected villages.</li>
+</ul></li>
+</ul>
+</section>
+<section id="multistage-sampling" class="level4">
+<h4 class="anchored" data-anchor-id="multistage-sampling">5. Multistage Sampling</h4>
+<ul>
+<li><strong>Description</strong>: Multistage sampling is a combination of various sampling techniques. For example, it may involve cluster sampling at the first stage, followed by simple random sampling or stratified sampling in subsequent stages.</li>
+<li><strong>Purpose</strong>:
+<ul>
+<li>To handle large and geographically dispersed populations by breaking down the sampling process into manageable stages.</li>
+</ul></li>
+<li><strong>Example</strong>:
+<ul>
+<li>A research organization conducting a nationwide health survey first selects random regions (clusters), then selects random households within those regions, and finally surveys individuals within those households.</li>
+</ul></li>
+</ul>
+</section>
+<section id="proportional-vs.-equal-allocation-in-stratified-sampling" class="level4">
+<h4 class="anchored" data-anchor-id="proportional-vs.-equal-allocation-in-stratified-sampling">6. Proportional vs.&nbsp;Equal Allocation in Stratified Sampling</h4>
+<ul>
+<li><strong>Description</strong>:
+<ul>
+<li><strong>Proportional allocation</strong>: The sample size from each stratum is proportional to the stratum’s size in the population.</li>
+<li><strong>Equal allocation</strong>: The same sample size is taken from each stratum, regardless of its size in the population.</li>
+</ul></li>
+<li><strong>Purpose</strong>:
+<ul>
+<li><strong>Proportional allocation</strong>: To ensure the sample reflects the population’s structure, with larger groups contributing more to the sample.</li>
+<li><strong>Equal allocation</strong>: To treat each subgroup as equally important, even if some subgroups are smaller than others.</li>
+</ul></li>
+<li><strong>Example</strong>:
+<ul>
+<li><strong>Proportional</strong>: A company conducting a market survey about customer satisfaction with three regions (North, South, West), with the South region having 50% of customers, North 30%, and West 20%. In a proportional sample, the South region would contribute 50% of the total sample.</li>
+<li><strong>Equal</strong>: A researcher studying voter preferences across different political parties in a country might want to sample an equal number of people from each party, regardless of the size of the party in the population.</li>
+</ul></li>
+</ul>
+</section>
+<section id="key-considerations-for-choosing-a-sampling-method" class="level4">
+<h4 class="anchored" data-anchor-id="key-considerations-for-choosing-a-sampling-method">Key Considerations for Choosing a Sampling Method:</h4>
+<ul>
+<li><strong>Population Size and Access</strong>: Consider how easy it is to access and list the population. For small or accessible populations, SRS might be appropriate. For large, dispersed populations, cluster or multistage sampling might be more cost-effective.</li>
+<li><strong>Homogeneity vs.&nbsp;Heterogeneity</strong>: If the population is highly heterogeneous (e.g., differing in income or education levels), stratified sampling can ensure all subgroups are properly represented.</li>
+<li><strong>Cost and Time</strong>: Some methods (e.g., cluster sampling, multistage sampling) may be more cost-effective, especially for large populations or geographically dispersed groups.</li>
+<li><strong>Precision vs.&nbsp;Practicality</strong>: Stratified and proportional sampling generally give more accurate results, but simpler methods like systematic sampling may be more practical when time or resources are limited.</li>
+</ul>
+<p>Each probabilistic method has its advantages, depending on the nature of the population and the goals of the survey.</p>
+</section>
+</section>
+<section id="non-probability-sampling" class="level3">
+<h3 class="anchored" data-anchor-id="non-probability-sampling"><strong>Non-Probability Sampling</strong></h3>
+<p>Non-probability sampling methods, such as <strong>convenience sampling</strong>, <strong>quota sampling</strong>, and <strong>snowball sampling</strong>, are commonly used when random sampling is impractical or unnecessary. These methods can introduce bias, so results should be interpreted cautiously. Below are examples for <strong>convenience sampling</strong> and <strong>snowball sampling</strong>.</p>
+</section>
+<section id="convenience-sampling" class="level3">
+<h3 class="anchored" data-anchor-id="convenience-sampling"><strong>1. Convenience Sampling</strong></h3>
+<section id="definition" class="level4">
+<h4 class="anchored" data-anchor-id="definition">Definition:</h4>
+<p>A sampling technique where participants are selected based on their <strong>availability</strong> or <strong>ease of access</strong>.</p>
+</section>
+<section id="example" class="level4">
+<h4 class="anchored" data-anchor-id="example">Example:</h4>
+<ul>
+<li><p><strong>Scenario</strong>: A researcher wants to study the coffee-drinking habits of university students.</p></li>
+<li><p><strong>Method</strong>:</p>
+<ul>
+<li><p>The researcher stands near the university library and surveys students passing by.</p></li>
+<li><p>Participants are chosen because they are conveniently located and easy to approach.</p></li>
+</ul></li>
+<li><p><strong>Limitations</strong>:</p>
+<ul>
+<li><p>The sample may not represent the entire student population (e.g., students who don’t frequent the library might have different coffee-drinking habits).</p></li>
+<li><p>May lead to biases like over-representing certain groups.</p></li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="snowball-sampling" class="level3">
+<h3 class="anchored" data-anchor-id="snowball-sampling"><strong>2. Snowball Sampling</strong></h3>
+<section id="definition-1" class="level4">
+<h4 class="anchored" data-anchor-id="definition-1">Definition:</h4>
+<p>A technique used to recruit participants through <strong>referrals</strong> from initial subjects, often used in hard-to-reach populations.</p>
+</section>
+<section id="example-1" class="level4">
+<h4 class="anchored" data-anchor-id="example-1">Example:</h4>
+<ul>
+<li><p><strong>Scenario</strong>: A sociologist wants to study the experiences of undocumented workers in a city.</p></li>
+<li><p><strong>Method</strong>:</p>
+<ul>
+<li><p>The researcher contacts one undocumented worker and conducts an interview.</p></li>
+<li><p>This participant refers the researcher to others they know, who then refer additional participants.</p></li>
+</ul></li>
+<li><p><strong>Limitations</strong>:</p>
+<ul>
+<li><p>The sample is unlikely to be random, as participants are chosen through social networks.</p></li>
+<li><p>Results may be skewed toward individuals within specific subgroups or social circles.</p></li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="key-differences" class="level3">
+<h3 class="anchored" data-anchor-id="key-differences"><strong>3. Key Differences</strong></h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Sampling Method</strong></th>
+<th><strong>Example Context</strong></th>
+<th><strong>Strengths</strong></th>
+<th><strong>Weaknesses</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Convenience Sampling</strong></td>
+<td>Survey students at a university library</td>
+<td>Quick and easy to collect data</td>
+<td>Limited generalizability; high bias</td>
+</tr>
+<tr class="even">
+<td><strong>Snowball Sampling</strong></td>
+<td>Research on undocumented workers</td>
+<td>Useful for reaching hidden populations</td>
+<td>Dependent on referrals; less diverse</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="caution-in-non-probability-sampling" class="level3">
+<h3 class="anchored" data-anchor-id="caution-in-non-probability-sampling"><strong>Caution in Non-Probability Sampling</strong></h3>
+<p>Non-random selection in these methods introduces potential <strong>bias</strong>:</p>
+<ul>
+<li><p>Results might not generalize to the broader population.</p></li>
+<li><p>Certain groups may be over- or under-represented.</p></li>
+</ul>
+<p>Despite these limitations, these methods are valuable when random sampling is impractical or when studying specialized or hard-to-reach populations.</p>
+<hr>
+</section>
+</section>
+<section id="common-survey-biases" class="level2">
+<h2 class="anchored" data-anchor-id="common-survey-biases">Common Survey Biases</h2>
+<ol type="1">
+<li><strong>Response Bias</strong>
+<ul>
+<li>Respondents may give socially desirable or inaccurate answers.<br>
+</li>
+<li><strong>Example</strong>: Overstating healthy eating habits.</li>
+</ul></li>
+<li><strong>Selection Bias</strong>
+<ul>
+<li>The sample does not represent the target population.<br>
+</li>
+<li><strong>Example</strong>: Internet usage survey sampling only urban residents.</li>
+</ul></li>
+<li><strong>Non-response Bias</strong>
+<ul>
+<li>Certain groups are underrepresented due to low participation.<br>
+</li>
+<li><strong>Example</strong>: Workplace satisfaction survey where only satisfied employees respond.</li>
+</ul></li>
+<li><strong>Acquiescence Bias</strong>
+<ul>
+<li>Tendency to agree with statements regardless of actual feelings.<br>
+</li>
+<li><strong>Example</strong>: Automatically selecting “agree” in satisfaction surveys.</li>
+</ul></li>
+</ol>
+<p><strong>Strategies to Minimize Biases:</strong><br>
+- Conduct pilot testing.<br>
+- Use clear instructions.<br>
+- Offer incentives to encourage participation.</p>
+<hr>
+</section>
+<section id="tools-for-survey-creation" class="level2">
+<h2 class="anchored" data-anchor-id="tools-for-survey-creation">Tools for Survey Creation</h2>
+<ul>
+<li><strong>Google Forms</strong><br>
+</li>
+<li><strong>Microsoft Forms</strong><br>
+</li>
+<li><strong>Survey Monkey</strong><br>
+</li>
+<li><strong>Quadratics</strong></li>
+</ul>
+<p><strong>Features:</strong><br>
+- Customization templates, real-time analytics, and easy sharing.</p>
+<hr>
+</section>
+<section id="ethical-considerations" class="level2">
+<h2 class="anchored" data-anchor-id="ethical-considerations">Ethical Considerations</h2>
+<ol type="1">
+<li><strong>Informed Consent</strong>
+<ul>
+<li>Ensure participants understand the survey’s purpose and data usage.</li>
+</ul></li>
+<li><strong>Confidentiality</strong>
+<ul>
+<li>Protect respondents’ identities and sensitive information.</li>
+</ul></li>
+<li><strong>Voluntary Participation</strong>
+<ul>
+<li>Make it clear that participation is optional, and respondents may skip questions if desired.</li>
+</ul></li>
+</ol>
+<hr>
+</section>
+<section id="determining-the-sample-size-for-surveys" class="level2">
+<h2 class="anchored" data-anchor-id="determining-the-sample-size-for-surveys">Determining the Sample Size for Surveys</h2>
+<p>Determining the appropriate sample size is a crucial step in designing a survey, as it directly impacts the accuracy and reliability of the results. If the sample is too small, the survey may not capture enough diversity or may lead to misleading conclusions. If the sample is too large, it can be inefficient and costly. Here’s a breakdown of the key factors to consider when determining sample size:</p>
+<section id="key-factors-in-sample-size-calculation" class="level4">
+<h4 class="anchored" data-anchor-id="key-factors-in-sample-size-calculation">Key Factors in Sample Size Calculation</h4>
+<ol type="1">
+<li><strong>Population Size (N)</strong>:
+<ul>
+<li>The total number of individuals in the population you are studying. If the population is large (e.g., millions of people), it has less impact on the sample size calculation. However, for small populations, this factor becomes more significant.</li>
+</ul></li>
+<li><strong>Margin of Error (E)</strong>:
+<ul>
+<li>The margin of error represents the amount of random sampling error you are willing to tolerate in your results. It is typically expressed as a percentage (e.g., ±5%). Smaller margins of error require larger sample sizes.</li>
+<li>Example: A margin of error of ±5% means the true value of the population parameter is likely within 5% of the sample estimate.</li>
+</ul></li>
+<li><strong>Confidence Level (Z)</strong>:
+<ul>
+<li>The confidence level reflects how confident you want to be that the sample accurately represents the population. Common confidence levels are 90%, 95%, and 99%. The higher the confidence level, the larger the required sample size.</li>
+<li>The Z-value corresponds to the desired confidence level (e.g., for 95% confidence, Z = 1.96).</li>
+</ul></li>
+<li><strong>Population Proportion (P)</strong>:
+<ul>
+<li>This refers to the estimated proportion of the population that is expected to exhibit a certain characteristic (e.g., 50% of the population supports a policy). If you don’t know this proportion, you often assume 50% (0.5), which gives the maximum variability and ensures the largest possible sample size.</li>
+</ul></li>
+</ol>
+</section>
+<section id="sample-size-formula" class="level4">
+<h4 class="anchored" data-anchor-id="sample-size-formula">Sample Size Formula</h4>
+<p>For a simple random sample, the sample size (n) can be calculated using the following formula:</p>
+<p><span class="math display">\[ n = \frac{Z^2 \cdot P \cdot (1 - P)}{E^2} \]</span></p>
+<p>Where: - <strong>Z</strong> is the Z-score associated with the chosen confidence level. - <strong>P</strong> is the estimated population proportion. - <strong>E</strong> is the desired margin of error.</p>
+</section>
+<section id="step-by-step-example" class="level4">
+<h4 class="anchored" data-anchor-id="step-by-step-example">Step-by-Step Example</h4>
+<p>Let’s calculate the sample size for a survey with the following parameters: - <strong>Population size (N)</strong> = 10,000 - <strong>Confidence level</strong> = 95% (Z = 1.96) - <strong>Estimated population proportion (P)</strong> = 50% or 0.5 (most conservative estimate) - <strong>Margin of error (E)</strong> = ±5% or 0.05</p>
+<p>Using the formula:</p>
+<p><span class="math display">\[ n = \frac{(1.96)^2 \cdot 0.5 \cdot (1 - 0.5)}{(0.05)^2} \]</span></p>
+<p><span class="math display">\[ n = \frac{3.8416 \cdot 0.25}{0.0025} \]</span></p>
+<p><span class="math display">\[ n = 384.16 \]</span></p>
+<p>So, the sample size needed for a 95% confidence level with a 5% margin of error would be <strong>384</strong> participants.</p>
+</section>
+<section id="sample-size-formula-for-a-mean" class="level3">
+<h3 class="anchored" data-anchor-id="sample-size-formula-for-a-mean"><strong>Sample Size Formula for a Mean</strong></h3>
+<p>When estimating a population mean, the sample size formula is: [ n = ] Where: - (n): Required sample size. - (Z): Z-score corresponding to the desired confidence level. - (): Standard deviation of the population (if unknown, estimate it from a pilot study or prior data). - (E): Desired margin of error (maximum acceptable difference between the sample mean and true population mean).</p>
+<hr>
+</section>
+<section id="steps-for-calculating-sample-size" class="level3">
+<h3 class="anchored" data-anchor-id="steps-for-calculating-sample-size"><strong>Steps for Calculating Sample Size</strong></h3>
+<ol type="1">
+<li><strong>Determine Parameters</strong>:
+<ul>
+<li>Confidence level: E.g., 95% ((Z = 1.96)).</li>
+<li>Margin of error ((E)): Decide the acceptable range for the mean estimate (e.g., ±500 JDs).</li>
+<li>Population standard deviation (()): Estimate from prior studies or conduct a small pilot survey.</li>
+</ul></li>
+<li><strong>Apply the Formula</strong>: Substitute (Z), (), and (E) into the formula to calculate (n).</li>
+</ol>
+<hr>
+</section>
+<section id="example-2" class="level3">
+<h3 class="anchored" data-anchor-id="example-2"><strong>Example</strong></h3>
+<p>Suppose you want to estimate the <strong>average income</strong> of 10,000 students: - (Z = 1.96) (95% confidence level). - (= 5,000) JDs (estimated standard deviation from prior data). - (E = 500) JDs (desired margin of error).</p>
+<p><span class="math display">\[  n = \frac{{1.96^2 \cdot 5000^2}}{{500^2}} \]</span></p>
+<ol type="1">
+<li><p>Calculate the numerator: <span class="math display">\[  1.96\^2 \cdot 5000\^2 = 3.8416 \cdot 25,000,000 = 96,040,000 \]</span></p></li>
+<li><p>Calculate the denominator: [ 500^2 = 250,000 $$</p></li>
+<li><p>Compute (n): <span class="math display">\[  n = \frac{{96,040,000}}{{250,000}} = 384.16 \]</span></p></li>
+</ol>
+<p>Thus, the sample size needed is approximately <strong>384</strong>.</p>
+<section id="adjusting-for-small-populations-finite-population-correction" class="level4">
+<h4 class="anchored" data-anchor-id="adjusting-for-small-populations-finite-population-correction">Adjusting for Small Populations (Finite Population Correction)</h4>
+<p>If your population is relatively small (say less than 20,000), you can apply a finite population correction (FPC) to adjust the sample size. The formula for the corrected sample size is:</p>
+<p><span class="math display">\[ n\_{\text{adj}} = \frac{n \cdot (N - n)}{N - 1} \]</span></p>
+<p>Where: - <strong>n</strong> is the sample size without correction. - <strong>N</strong> is the population size.</p>
+<p>This correction is especially useful when sampling from small populations, where not adjusting for the finite size might lead to overestimation of the required sample size.</p>
+</section>
+<section id="practical-considerations-for-sample-size" class="level4">
+<h4 class="anchored" data-anchor-id="practical-considerations-for-sample-size">Practical Considerations for Sample Size</h4>
+<ul>
+<li><strong>Budget and Resources</strong>: While a larger sample size can improve the precision of your estimates, it also increases the time, cost, and resources required for data collection and analysis. Balancing statistical precision with practical constraints is essential.</li>
+<li><strong>Sampling Method</strong>: The sample size calculations above apply to simple random sampling. If you’re using other sampling methods (like stratified or cluster sampling), you may need to adjust the sample size accordingly, as these methods can be more or less efficient depending on the population structure.</li>
+</ul>
+</section>
+<section id="sample-size-for-different-confidence-levels-and-margins-of-error" class="level4">
+<h4 class="anchored" data-anchor-id="sample-size-for-different-confidence-levels-and-margins-of-error">Sample Size for Different Confidence Levels and Margins of Error</h4>
+<p>To help illustrate the effect of different margins of error and confidence levels, here’s a summary of common values for sample size calculations:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Confidence Level</th>
+<th>Z-value</th>
+<th>Margin of Error ± 5% (Sample Size)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>90%</td>
+<td>1.645</td>
+<td>271</td>
+</tr>
+<tr class="even">
+<td>95%</td>
+<td>1.96</td>
+<td>384</td>
+</tr>
+<tr class="odd">
+<td>99%</td>
+<td>2.576</td>
+<td>664</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="conclusion" class="level4">
+<h4 class="anchored" data-anchor-id="conclusion">Conclusion</h4>
+<p>Determining an appropriate sample size is essential to ensure that survey results are reliable and precise. The sample size should be large enough to account for variability in the population while also considering practical constraints such as time, budget, and resources.</p>
+</section>
+</section>
+</section>
+<section id="design-a-sample-survey" class="level1">
+<h1>Design a Sample Survey</h1>
+<p>Use Microsoft forms to design a survey that collects the following information and opinions .</p>
+<section id="demographics" class="level3">
+<h3 class="anchored" data-anchor-id="demographics">Demographics</h3>
+<p>Age Gender Current year of study</p>
+<p>Home distance from University</p>
+</section>
+<section id="previous-education" class="level3">
+<h3 class="anchored" data-anchor-id="previous-education">Previous Education</h3>
+<p>High School Degree (National Tawjihi, Internal)</p>
+<p>If Tawjihi, ask if Scientific or Non-Scientific.</p>
+<p>If International, Ask if SAT, IG, IB, Arabic Country</p>
+<p>High School Average</p>
+</section>
+<section id="academic-performance" class="level3">
+<h3 class="anchored" data-anchor-id="academic-performance">Academic Performance</h3>
+<p>How many hours do you study in a week?</p>
+<p>What is your average daily sleep time?</p>
+<p>What was your score in MID exam?</p>
+<p>What is your current GPA?</p>
+</section>
+<section id="working-while-studying" class="level3">
+<h3 class="anchored" data-anchor-id="working-while-studying">Working while studying</h3>
+<p>Ask if the student is working while he is studying</p>
+<p>If the student work, then ask the following quesations</p>
+<p>Do you work full time or part time?</p>
+<p>Are a business owner or employee?</p>
+</section>
+<section id="statisfaction" class="level3">
+<h3 class="anchored" data-anchor-id="statisfaction">Statisfaction</h3>
+<p>How satisfied are you about your experience at the University of Petra? (Use a Likert Score)</p>
+<p>How satisfied are you about Business Intelligence Major? (Use a Likert Score)</p>
+<p>Will you recommend University of Petra to your colleagues? (Use Net Promoter Score)</p>
+<p>Will you recommend studying Business Intelligence at the University of Petra to your colleagues? (Use Net Promoter Score)</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
