@@ -506,7 +506,7 @@ Here’s a quick reference for sample sizes with a margin of error of ±5%:
 ### Summary Table of Question Types and Use Cases:
 
 | **Question Type** | **Use Case Examples** |
-|------------------------|-----------------------------------------------|
+|----|----|
 | **Choice** | Polls, quizzes, feedback surveys. |
 | **Text** | Open-ended feedback, collecting names or opinions. |
 | **Rating** | Satisfaction surveys, product evaluations. |
@@ -566,7 +566,7 @@ While **ranking**, **Net Promoter Score (NPS)**, and **Likert scale** question t
 ### Key Differences
 
 | Feature | Ranking | NPS | Likert Scale |
-|------------------|-------------------|------------------|------------------|
+|----|----|----|----|
 | **Focus** | Relative importance/order | Recommendation likelihood | Agreement/intensity level |
 | **Response Format** | Reordering items | Numerical scale (0–10) | Ordered categories |
 | **Data Interpretation** | Ordinal (order matters) | Interval (summary score) | Ordinal or interval |
@@ -625,7 +625,7 @@ Use Microsoft forms to design a survey that collects the following information a
 Here's a table listing each question, the appropriate question type in Microsoft Forms, and the reason for using that type:
 
 | **Question** | **Microsoft Forms Question Type** | **Reason for Using This Question Type** |
-|-----------------------|------------------|-------------------------------|
+|----|----|----|
 | **Demographics** |  |  |
 | Age | Text (Short Answer) | Allows respondents to input their exact age for precise data collection. |
 | Gender | Choice | Provides predefined options for efficient and structured data analysis. |
