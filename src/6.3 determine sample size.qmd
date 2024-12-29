@@ -1,5 +1,5 @@
 ---
-title: "6.4 Determine Sample Size for Surveys"
+title: "6.3 Determine Sample Size for Surveys"
 format: html
 editor: visual
 include-before: |

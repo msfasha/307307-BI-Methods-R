@@ -1,5 +1,5 @@
 ---
-title: "6.3 Controlled Experiments and Inferring Causality"
+title: "6.4 Controlled Experiments and Inferring Causality"
 format: html
 editor: visual
 include-before: |
