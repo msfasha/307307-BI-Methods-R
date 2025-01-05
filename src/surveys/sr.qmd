@@ -1,0 +1,65 @@
+---
+title: "Students Survey"
+format: html
+editor: visual
+---
+
+### **Assignment: Exploratory Data Analysis and Hypothesis Testing**
+
+**Objective**:  
+Analyze the survey dataset to gain insights using EDA and hypothesis testing in R.
+
+---
+
+#### **Instructions**:
+1. Use the provided dataset.
+2. Perform the tasks listed below in **R**.
+3. Submit your R script and a brief report summarizing your findings.
+
+---
+
+### **Tasks**
+
+#### **Part 1: Exploratory Data Analysis (EDA)**
+1. **Data Overview**:
+   - Load the dataset and display the first few rows.
+   - Check for missing values and handle them.
+
+2. **Summary Statistics**:
+   - Compute descriptive statistics for numeric columns (`High School Average`, `MID Exam Score`, `GPA`, etc.).
+   - Summarize categorical variables (`Gender`, `Year of Study`, etc.).
+
+3. **Visualizations**:
+   - Gender distribution (bar chart).
+   - GPA distribution (histogram).
+   - Satisfaction levels for the university and the Business Intelligence major (box plots or bar charts).
+   - NPS categories (promoters, passives, detractors) as a bar chart.
+
+4. **Correlation Analysis**:
+   - Compute correlations between numeric variables.
+   - Visualize correlations with a heatmap.
+
+---
+
+#### **Part 2: Hypothesis Testing**
+1. **T-Test**:
+   - Compare average GPA between students who work and those who do not.
+   - **Null Hypothesis (\(H_0\))**: No difference in GPA between the two groups.
+
+2. **Chi-Square Test**:
+   - Test whether gender is associated with satisfaction levels.
+   - **Null Hypothesis (\(H_0\))**: Gender and satisfaction are independent.
+
+3. **ANOVA**:
+   - Test if satisfaction levels differ by `Year of Study`.
+   - **Null Hypothesis (\(H_0\))**: No difference in satisfaction levels across years.
+
+4. **NPS Analysis**:
+   - Calculate the NPS score:
+     - Promoters: Scores 9–10.
+     - Passives: Scores 7–8.
+     - Detractors: Scores 0–6.
+   - Report insights.
+
+---
+

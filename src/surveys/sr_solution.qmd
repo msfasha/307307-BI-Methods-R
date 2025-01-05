@@ -1,0 +1,114 @@
+---
+title: "Student Survey Solution"
+format: html
+editor: visual
+---
+
+#### **Loading the Data**
+
+```{r}
+# Load necessary libraries
+library(dplyr)
+library(readr)
+library(ggplot2)
+library(tidyr)
+
+# Load the dataset
+survey_data <- read_csv("students_survey_307307_20241.csv")
+
+# View first few rows
+head(survey_data)
+
+# Check for missing values
+colSums(is.na(survey_data))
+```
+
+#### **EDA**
+
+```{r}
+# Summary Statistics
+summary(survey_data)
+```
+
+```{r}
+# Gender distribution
+gender_dist <- table(survey_data$Gender)
+barplot(gender_dist, main="Gender Distribution", col=c("blue", "pink"))
+```
+
+```{r}
+# GPA distribution
+hist(as.numeric(survey_data$GPA), main="GPA Distribution", xlab="GPA", col="lightgreen", breaks=10)
+```
+
+```{r}
+# Satisfaction levels
+boxplot(survey_data$Satisfaction_University ~ survey_data$Gender, 
+        main="Satisfaction Levels by Gender", xlab="Gender", ylab="Satisfaction")
+```
+
+```{r}
+# Correlation heatmap
+library(corrplot)
+numeric_data <- survey_data %>% select_if(is.numeric)
+cor_matrix <- cor(numeric_data, use="complete.obs")
+corrplot(cor_matrix, method="circle")
+```
+
+#### **Hypothesis Testing**
+
+1.  **T-Test**: GPA vs. Work Status
+
+```{r}
+# T-Test
+t_test_result <- t.test(as.numeric(survey_data$GPA) ~ survey_data$Work_Status)
+print(t_test_result)
+```
+
+2.  **Chi-Square Test**: Gender vs. Satisfaction
+
+```{r}
+# Chi-Square Test
+satisfaction_gender <- table(survey_data$Gender, survey_data$Satisfaction_University)
+chi_test_result <- chisq.test(satisfaction_gender)
+print(chi_test_result)
+```
+
+3.  **ANOVA**: Satisfaction vs. Year of Study
+
+```{r}
+# ANOVA
+anova_result <- aov(Satisfaction_University ~ Year_of_Study, data=survey_data)
+summary(anova_result)
+```
+
+4.  **NPS Analysis**
+
+```{r}
+# NPS Calculation
+survey_data <- survey_data %>%
+  mutate(NPS_Category = case_when(
+    Recommend_Score >= 9 ~ "Promoter",
+    Recommend_Score >= 7 & Recommend_Score <= 8 ~ "Passive",
+    Recommend_Score <= 6 ~ "Detractor"
+  ))
+
+nps_summary <- table(survey_data$NPS_Category) / nrow(survey_data) * 100
+nps_score <- nps_summary["Promoter"] - nps_summary["Detractor"]
+print(nps_score)
+```
+
+------------------------------------------------------------------------
+
+### **Expected Outputs**
+
+1.  **EDA Insights**:
+    -   Descriptive statistics.
+    -   Visualizations: gender distribution, GPA histogram, satisfaction box plots.
+    -   Correlation heatmap.
+2.  **Hypothesis Testing**:
+    -   T-Test: Compare GPA for working vs. non-working students.
+    -   Chi-Square Test: Association between gender and satisfaction.
+    -   ANOVA: Differences in satisfaction by year.
+    -   NPS score.
+3.  !
