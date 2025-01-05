@@ -4,111 +4,215 @@ format: html
 editor: visual
 ---
 
-#### **Loading the Data**
+### **Statistics Assignment with R Solutions**
 
-```{r}
-# Load necessary libraries
-library(dplyr)
-library(readr)
-library(ggplot2)
-library(tidyr)
+#### **Instructions**
 
-# Load the dataset
-survey_data <- read_csv("students_survey_307307_20241.csv")
+The following code assumes the dataset is loaded as `students_data` in R. Replace `path_to_file` with the actual path to your dataset to reproduce the results.
 
-# View first few rows
-head(survey_data)
+------------------------------------------------------------------------
 
-# Check for missing values
-colSums(is.na(survey_data))
-```
+### **Part 1: Descriptive Statistics**
 
-#### **EDA**
+1.  **Basic Summary**
 
-```{r}
-# Summary Statistics
-summary(survey_data)
-```
+``` r
+# Load dataset
+students_data <- read.csv("path_to_file")
 
-```{r}
-# Gender distribution
-gender_dist <- table(survey_data$Gender)
-barplot(gender_dist, main="Gender Distribution", col=c("blue", "pink"))
-```
-
-```{r}
-# GPA distribution
-hist(as.numeric(survey_data$GPA), main="GPA Distribution", xlab="GPA", col="lightgreen", breaks=10)
-```
-
-```{r}
-# Satisfaction levels
-boxplot(survey_data$Satisfaction_University ~ survey_data$Gender, 
-        main="Satisfaction Levels by Gender", xlab="Gender", ylab="Satisfaction")
-```
-
-```{r}
-# Correlation heatmap
-library(corrplot)
-numeric_data <- survey_data %>% select_if(is.numeric)
-cor_matrix <- cor(numeric_data, use="complete.obs")
-corrplot(cor_matrix, method="circle")
-```
-
-#### **Hypothesis Testing**
-
-1.  **T-Test**: GPA vs. Work Status
-
-```{r}
-# T-Test
-t_test_result <- t.test(as.numeric(survey_data$GPA) ~ survey_data$Work_Status)
-print(t_test_result)
-```
-
-2.  **Chi-Square Test**: Gender vs. Satisfaction
-
-```{r}
-# Chi-Square Test
-satisfaction_gender <- table(survey_data$Gender, survey_data$Satisfaction_University)
-chi_test_result <- chisq.test(satisfaction_gender)
-print(chi_test_result)
-```
-
-3.  **ANOVA**: Satisfaction vs. Year of Study
-
-```{r}
-# ANOVA
-anova_result <- aov(Satisfaction_University ~ Year_of_Study, data=survey_data)
-summary(anova_result)
-```
-
-4.  **NPS Analysis**
-
-```{r}
-# NPS Calculation
-survey_data <- survey_data %>%
-  mutate(NPS_Category = case_when(
-    Recommend_Score >= 9 ~ "Promoter",
-    Recommend_Score >= 7 & Recommend_Score <= 8 ~ "Passive",
-    Recommend_Score <= 6 ~ "Detractor"
+# Summary for Age, Mid-exam score, and GPA
+summary_stats <- students_data %>%
+  select(Age, What.was.your.score.in.MID.exam., What.is.your.current.GPA.) %>%
+  summarise_all(list(
+    Mean = mean,
+    Median = median,
+    StdDev = sd,
+    Min = min,
+    Max = max,
+    Mode = ~ names(sort(table(.), decreasing = TRUE))[1]
   ))
-
-nps_summary <- table(survey_data$NPS_Category) / nrow(survey_data) * 100
-nps_score <- nps_summary["Promoter"] - nps_summary["Detractor"]
-print(nps_score)
+print(summary_stats)
 ```
 
 ------------------------------------------------------------------------
 
-### **Expected Outputs**
+2.  **Frequency Distributions**
 
-1.  **EDA Insights**:
-    -   Descriptive statistics.
-    -   Visualizations: gender distribution, GPA histogram, satisfaction box plots.
-    -   Correlation heatmap.
-2.  **Hypothesis Testing**:
-    -   T-Test: Compare GPA for working vs. non-working students.
-    -   Chi-Square Test: Association between gender and satisfaction.
-    -   ANOVA: Differences in satisfaction by year.
-    -   NPS score.
-3.  !
+``` r
+# Frequency tables
+gender_dist <- table(students_data$Gender)
+year_dist <- table(students_data$Year.of.Study)
+distance_dist <- table(students_data$How.far.is.your.home.from.the.university.)
+print(gender_dist)
+print(year_dist)
+print(distance_dist)
+```
+
+------------------------------------------------------------------------
+
+3.  **Percentile Analysis**
+
+``` r
+# Percentiles for GPA
+gpa_percentiles <- quantile(students_data$What.is.your.current.GPA., probs = c(0.25, 0.5, 0.75))
+print(gpa_percentiles)
+```
+
+------------------------------------------------------------------------
+
+### **Part 2: Exploratory Data Analysis (EDA)**
+
+4.  **Age Distribution**
+
+``` r
+# Histogram and density plot
+hist(students_data$Age, main = "Age Distribution", xlab = "Age", col = "lightblue", breaks = 10)
+print(summary(students_data$Age))  # Outlier detection
+```
+
+------------------------------------------------------------------------
+
+5.  **Satisfaction Levels**
+
+``` r
+# Boxplots for satisfaction levels across genders
+boxplot(students_data$How.satisfied.are.you.about.your.experience.at.the.University.of.Petra. ~ students_data$Gender,
+        main = "University Satisfaction by Gender", xlab = "Gender", ylab = "Satisfaction Level")
+```
+
+------------------------------------------------------------------------
+
+6.  **Home Distance vs. Recommendation**
+
+``` r
+# Boxplot for recommendation likelihood
+boxplot(students_data$How.likely.are.you.to.recommend.the.University.of.Petra.to.a.friend.or.colleague. ~ 
+          students_data$How.far.is.your.home.from.the.university.,
+        main = "Recommendation Likelihood by Home Distance", xlab = "Home Distance", ylab = "Recommendation Likelihood")
+```
+
+------------------------------------------------------------------------
+
+7.  **Correlation Analysis**
+
+``` r
+# Correlation matrix
+correlation_matrix <- cor(students_data %>% select(What.was.your.score.in.MID.exam., What.is.your.current.GPA.,
+                                                   How.satisfied.are.you.about.your.experience.at.the.University.of.Petra.,
+                                                   How.likely.are.you.to.recommend.the.University.of.Petra.to.a.friend.or.colleague.))
+print(correlation_matrix)
+```
+
+------------------------------------------------------------------------
+
+### **Part 3: Inferential Statistics**
+
+8.  **Hypothesis Testing (T-Test)**
+
+``` r
+# GPA comparison between males and females
+t_test_result <- t.test(What.is.your.current.GPA. ~ Gender, data = students_data)
+print(t_test_result)
+```
+
+------------------------------------------------------------------------
+
+9.  **ANOVA**
+
+``` r
+# Effect of year of study on GPA
+anova_result <- aov(What.is.your.current.GPA. ~ Year.of.Study, data = students_data)
+summary(anova_result)
+```
+
+------------------------------------------------------------------------
+
+10. **Chi-Square Test**
+
+``` r
+# Association between work status and satisfaction
+work_satisfaction_table <- table(students_data$Do.you.work.while.studying., students_data$How.satisfied.are.you.about.your.experience.at.the.University.of.Petra.)
+chi_square_result <- chisq.test(work_satisfaction_table)
+print(chi_square_result)
+```
+
+------------------------------------------------------------------------
+
+### **Part 4: Regression Analysis**
+
+11. **Simple Linear Regression**
+
+``` r
+# Predict GPA using mid-exam score
+lm_model <- lm(What.is.your.current.GPA. ~ What.was.your.score.in.MID.exam., data = students_data)
+summary(lm_model)
+```
+
+------------------------------------------------------------------------
+
+12. **Multiple Linear Regression**
+
+``` r
+# Predict GPA using multiple variables
+multi_lm_model <- lm(What.is.your.current.GPA. ~ What.was.your.score.in.MID.exam. +
+                     How.satisfied.are.you.about.your.experience.at.the.University.of.Petra. +
+                     How.satisfied.are.you.about.the.Business.Intelligence.major., data = students_data)
+summary(multi_lm_model)
+```
+
+------------------------------------------------------------------------
+
+13. **Logistic Regression**
+
+``` r
+# Logistic regression for recommendation likelihood
+students_data$Recommend <- ifelse(students_data$How.likely.are.you.to.recommend.the.University.of.Petra.to.a.friend.or.colleague. > 7, 1, 0)
+logistic_model <- glm(Recommend ~ How.satisfied.are.you.about.your.experience.at.the.University.of.Petra. +
+                      How.satisfied.are.you.about.the.Business.Intelligence.major. + Year.of.Study,
+                      family = binomial, data = students_data)
+summary(logistic_model)
+```
+
+------------------------------------------------------------------------
+
+### **Part 5: Specific Questions**
+
+14. **Key Insights**
+
+``` r
+# Average GPA by year
+avg_gpa_by_year <- aggregate(What.is.your.current.GPA. ~ Year.of.Study, data = students_data, FUN = mean)
+print(avg_gpa_by_year)
+
+# Satisfaction by group
+satisfaction_by_gender <- aggregate(How.satisfied.are.you.about.your.experience.at.the.University.of.Petra. ~ Gender,
+                                    data = students_data, FUN = mean)
+print(satisfaction_by_gender)
+```
+
+------------------------------------------------------------------------
+
+15. **Outliers**
+
+``` r
+# Identify outliers for GPA and mid-exam scores
+boxplot(students_data$What.is.your.current.GPA., main = "GPA Outliers", horizontal = TRUE)
+boxplot(students_data$What.was.your.score.in.MID.exam., main = "Mid-Exam Score Outliers", horizontal = TRUE)
+```
+
+------------------------------------------------------------------------
+
+### **Part 6: Bonus Tasks**
+
+16. **Clustering**
+
+``` r
+# K-means clustering
+set.seed(123)
+clustering_data <- students_data %>% select(What.is.your.current.GPA., What.was.your.score.in.MID.exam., How.satisfied.are.you.about.your.experience.at.the.University.of.Petra.)
+kmeans_result <- kmeans(clustering_data, centers = 3)
+students_data$Cluster <- kmeans_result$cluster
+print(table(students_data$Cluster))
+```
+
+------------------------------------------------------------------------
